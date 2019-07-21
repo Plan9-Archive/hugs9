@@ -215,7 +215,7 @@ int access(char *fileName, int dummy) {
 Bool readable(f,isReg)        /* is f readable (and also, a regular file?) */
 String f;
 Bool   isReg; {
-	Printf("readable %s\n", f);
+//	Printf("readable %s\n", f);
 #if DJGPP2 || HAVE_GETFINFO /* stat returns bogus mode bits on djgpp2 */
     return (0 == access(f,4));
 #elif HAVE_SYS_STAT_H || HAVE_STAT_H

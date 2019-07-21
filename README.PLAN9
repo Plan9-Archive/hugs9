@@ -1,0 +1,4 @@
+cd src
+bind -a /bin/ape /bin
+make install
+hugs
