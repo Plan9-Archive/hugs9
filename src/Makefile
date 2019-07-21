@@ -63,16 +63,7 @@ PRELUDE		= config.h options.h prelude.h
 
 install:	hugs runhugs
 	test -d ${HUGLIB} || mkdir ${HUGLIB}
-	test -d ${HUGLIB}/lib || mkdir ${HUGLIB}/lib
-	test -d ${HUGLIB}/demos || mkdir ${HUGLIB}/demos
-	test -d ${HUGLIB}/demos/prolog || mkdir ${HUGLIB}/demos/prolog
-	test -d ${HUGLIB}/lib/hugs || mkdir ${HUGLIB}/lib/hugs
-	test -d ${HUGLIB}/lib/exts || mkdir ${HUGLIB}/lib/exts
-	cp ../lib/[A-Z]* ${HUGLIB}/lib
-	cp ../lib/hugs/* ${HUGLIB}/lib/hugs/
-	cp ../lib/exts/* ${HUGLIB}/lib/exts/
-	cp ../demos/prolog/* ${HUGLIB}/demos/prolog/
-	cp ../demos/[A-Z]* ${HUGLIB}/demos/
+	dircp ../hugs ${HUGLIB}
 	cp hugs ${home}/bin/${objtype}/
 	cp runhugs ${home}/bin/${objtype}/
 
