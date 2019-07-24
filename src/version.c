@@ -35,15 +35,7 @@
 #include "echodate.h"
 #endif
 
-#ifndef MONTH_YEAR
-#define VERSION_STRING "<snapshot>"
-#else
-#if MAJOR_RELEASE
-#define VERSION_STRING "September 2006"
-#else
-#define VERSION_STRING "20060920"
-#endif
-#endif
+#define VERSION_STRING "Hugs2006/Plan9"
 
 String versionString = VERSION_STRING;
 
