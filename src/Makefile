@@ -81,6 +81,11 @@ runhugs.o	: config.h options.h server.h runhugs.c
 runhugs	: runhugs.o $(SERVER_OBJECTS)
 		  $(LD) $(LDFLAGS) -o runhugs runhugs.o $(SERVER_OBJECTS) $(LIBS) 
 
+ffihugs.o	: runhugs.o
+		  $(CC) -c $(CFLAGS) $(OPTFLAGS) -DFFI_COMPILER runhugs.c -o ffihugs.o
+ffihugs : ffihugs.o $(SERVER_OBJECTS)
+		  $(LD) $(LDFLAGS) -o ffihugs ffihugs.o $(SERVER_OBJECTS) $(LIBS) 
+
 ################################################################
 # Clean, distclean, veryclean, TAGS
 ################################################################
