@@ -27,7 +27,7 @@
  * for HUGSFLAGS in the registry (Win32 only).  In all cases, use a
  * string of the form -P"...".
  */
-#define HUGSPATH ".:{Hugs}/packages/hugsbase:{Hugs}/packages/base:{Hugs}/packages/haskell98:{Hugs}/packages/network:{Hugs}/oldlib:{Hugs}/include"
+#define HUGSPATH ".:{Hugs}/packages/*:{Hugs}/oldlib:{Hugs}/include"
 #define HUGSPATH2 "{Hugs}/libraries:{Hugs}/oldlib"
 
 /* The list of suffixes used by Haskell source files, separated either
